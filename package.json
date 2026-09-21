@@ -1,0 +1,22 @@
+{
+  "name": "shopify-order-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Watches your Shopify store for new orders, posts fraud-aware alerts to Slack in real time, and lets your team add notes back to the order from inside Slack.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "install:shopify": "node scripts/install.js",
+    "register:webhook": "node scripts/register-webhook.js"
+  },
+  "dependencies": {
+    "@slack/bolt": "^3.19.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
